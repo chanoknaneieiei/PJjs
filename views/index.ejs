@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='/stylesheets/login.css' />
+    <STYLE TYPE="TEXT/CSS">
+      A:link {
+      text-decoration:none;
+      }
+      A:visited {
+      text-decoration:none;
+      }
+      </STYLE>
+  </head>
+  <body>
+    <header>
+      <div class="slide">
+         <figure>
+             <img src="images/kmutnb.png">
+             <img src="images/fitm.jpg">
+             <img src="images/bas.jpg">
+             <img src="images/cms.jpg">
+             <img src="images/kmutnb.png">
+         </figure>
+     </div>
+     <div class="header">
+         <img src="images/logo.png">
+         <h1>KMUTNB</h1>
+         <h2>DORMITORY</h2>
+     </div>
+ </header>
+ <main>
+     <div class="bg">
+        <% if(locals.errors){ %>
+            <ul class="alert alert-danger" role="alert" id="blog">
+                <% Object.values(errors).forEach(function(error){ %>
+                    -<%= error.msg %><br>
+                <% }) %>
+            </ul>
+        <% } %>
+     </div>
+     <h1>LOG-IN</h1>
+     <h2>เข้าสู่ระบบสำหรับนักศึกษา / ผู้จัดการหอพัก</h2>
+     <form action="/" method="post" >
+         <input type="text" placeholder="&#128100; USERNAME" id="user" name="user">
+         <input type="password" placeholder="&#128273; PASSWORD" id="pwd" name="pwd" maxlength="13">
+         <button type="submit" id="login">LOG-IN</button>
+         <a href="/register" role="button">Sign Up</a>
+     </form>
+ </main>
+</body>
+</html>

@@ -1,0 +1,106 @@
+.bg-img{
+    width: 100%;
+    height: 100vh;
+}
+
+#blog{
+    font-size: 14px;
+}
+
+.bg{
+    width: 35%;
+    height: 96vh;
+    background-color: whitesmoke;
+    position: absolute;
+    border-radius: 20px;
+    left: 30%;
+    top: 2%;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+
+
+.bg h1 {
+    color: #000000;
+    text-align: center;
+    position: relative;
+    top: 2px;
+    font-weight: bold;
+    font-family: "JasmineUPC";
+    font-size: 50px;
+}
+
+.bg h2{
+    color: #000000;
+    font-size: 24px;
+    font-family: "JasmineUPC";
+    text-align: center;
+    position: relative;
+    top: -10px;
+}
+
+form{
+    position: absolute;
+}
+
+form input{
+    font-size: 24px;
+    border-radius: 8px;
+    width: 330px;
+    height: 35px;
+    padding: 5px 10px;
+    border: none;
+    left: 35%;
+}
+
+form #p1 {
+    color: red;
+    top: 80px;
+    left: 100px;
+    position: relative;
+}
+
+form #p2 {
+    color: red;
+    top: 140px;
+    left: 100px;
+    position: relative;
+}
+
+.name{
+    position: absolute;
+    text-align: left;
+    font-family: "JasmineUPC";
+    top: 0px;
+}
+
+.id{
+    position: absolute;
+    font-family: "JasmineUPC";
+    top: 100px;
+}
+
+.pid{
+    position: absolute;
+    font-family: "JasmineUPC";
+    top: 200px;
+}
+
+.phone{
+    position: absolute;
+    font-family: "JasmineUPC";
+    top: 300px;
+}
+
+form button{
+    position: absolute;
+    left: 45%;
+    top: 360px;
+    border-radius: 60px;
+    padding: 10px 100px;
+    background: orangered;
+    border: 0px;
+    font-family: "JasmineUPC";
+    font-weight: bold;
+    font-size: 34px;
+}
