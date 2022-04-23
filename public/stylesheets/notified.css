@@ -82,4 +82,9 @@ button{
     font-family: "JasmineUPC";
     font-size: 24px;
     border-radius: 8px;
+    text-decoration: none; 
+    background-color: orangered;
+    padding: 22px 30px;
+    border: none;
+    color: black;
 }

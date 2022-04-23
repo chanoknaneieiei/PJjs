@@ -120,6 +120,7 @@ form a{
     border: none;
     padding: 12px 18px;
     box-shadow: 0.1em 0.1em 0.2em black;
+    text-decoration: none; 
 }
 
 .slide{
