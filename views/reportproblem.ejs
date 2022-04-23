@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Report</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="register.js"></script>
+        <link rel="stylesheet" type="text/css" href='/stylesheets/report.css'>
+        <STYLE TYPE="TEXT/CSS">
+            A:link {
+            text-decoration:none;
+            }
+            A:visited {
+            text-decoration:none;
+            }
+            </STYLE>
+        <title>Register</title>
+    </head>
+    <body background="/images/bas.jpg">
+        <%- include alert %>
+        <%- include navbar %>
+        <h2 align="center">แจ้งปัญหาภายในหอพัก</h2>
+        <main>
+            <% if(locals.errors){ %>
+                <ul class="alert alert-danger">
+                    <% Object.values(errors).forEach(function(error){ %>
+                        <li><%= error.msg %></li>
+                    <% }) %>
+                </ul>
+            <% } %>
+            <div class = "bg">
+                    <form name = "form" action="/reportproblem/success" method="post">
+                        <div class="show-info">
+                            <p id="stdid">รหัสนักศึกษา : </p>
+                            <p id="name">ชื่อ-นามสกุล : </p>
+                            <p id="phone">เบอร์โทร : </p>
+                            <p id="room">เลขห้อง : </p>
+                        </div>
+                        <div class="form-group">
+                            <label>รายละเอียด</label>
+                            <textarea cols="80" rows="20" name = "problem" class="form-control"></textarea><br>
+                            <button type="submit">SUBMIT</button>
+                        </div>
+                    </form>
+            </div>
+            
+        </main>
+    </body>
+</html>
