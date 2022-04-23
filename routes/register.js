@@ -30,8 +30,8 @@ router.post('/', [
             pwd:req.body.pid,
             pnum:req.body.pnum
         });
-        res.location('/');
-        res.redirect('/');
+          res.location('/');
+          res.redirect('/');
       } else if((req.body.stid == doc.user)){
           console.log("Find");
           res.location('/register');

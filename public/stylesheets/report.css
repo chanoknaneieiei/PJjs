@@ -53,13 +53,13 @@ button{
     background-color: orangered;
     border-radius: 5px;
     border: none;
-    top: 120%;
+    top: 125%;
     left: 84%;
 }
 
-#btB{
+#back{
     position: relative;
-    top: 120%;
+    top: 125%;
     left: 0%;
     background-color: orangered;
     color: black;
@@ -69,4 +69,14 @@ button{
     text-align: center;
     font-size: 28px;
     font-family: "JasmineUPC";
+}
+
+p input{
+    display: flexbox;
+    top: 50px;
+    margin-top: 4px;
+}
+
+#num-room{
+    max-width: 50px;
 }

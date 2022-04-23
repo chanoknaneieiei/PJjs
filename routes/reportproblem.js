@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const { check, validationResult } = require('express-validator');
-const monk = require('monk')("localhost:27017/ProjectJS");
+const monk = require('monk')("localhost:27017/Dormitory");
 
 router.get('/', function(req, res, next) {
     res.render("reportproblem");
@@ -12,7 +12,11 @@ router.get('/success', function(req, res, next) {
 });
 
 router.post('/success', [
-    check("problem" , "กรุณาป้อนปัญหา").not().isEmpty()
+    check("problem" , "กรุณาป้อนปัญหา").not().isEmpty(),
+    check("stdid" , "กรุณาป้อนรหัสนักศึกษา").not().isEmpty(),
+    check("name" , "กรุณาป้อนชื่อ-นามสกุล").not().isEmpty(),
+    check("pnum" , "กรุณาป้อนเบอร์โทร").not().isEmpty(),
+    check("room" , "กรุณาป้อนเลขห้อง").not().isEmpty()
 ],function(req, res, next) {
     const result = validationResult(req);
     var errors = result.errors;
@@ -23,16 +27,25 @@ router.post('/success', [
         //insert data to DB
         var collection = monk.get('problem');
         collection.insert({
+            stid:req.body.stdid,
+            name:req.body.name,
+            pnum:req.body.pnum,
+            room:req.body.room,
             problem:req.body.problem
+
         } , function(err , data){
             if(err){
                 res.send(err);
             }
             else{
-                res.location('/');
-                res.redirect('/');
+                console.log("save");
+                //res.location('/');
+                //res.redirect('/');
 
             }
+            console.log("not save");
+            res.location('/');
+            res.redirect('/');
         });
     }
 });

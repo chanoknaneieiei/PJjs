@@ -28,18 +28,18 @@
                 </ul>
             <% } %>
             <div class = "bg">
-                    <form action="/reportproblem/success" method="post">
+                    <form action="/report/success" method="post">
                         <div class="show-info">
-                            <p id="stdid">รหัสนักศึกษา : <input type="text" id="stdid" name="stdid" ></p>
-                            <p id="name">ชื่อ-นามสกุล : <input type="text" id="name" name="name" ></p>
-                            <p id="phone">เบอร์โทร : <input type="text" id="pnum" name="pnum" ></p>
-                            <p id="room">เลขห้อง : <input type="text" id="room" name="room" ></p>
+                            <p id="stdid">รหัสนักศึกษา : <input type="text" id="std-id" name="stdid" maxlength="13"></p>
+                            <p id="name">ชื่อ-นามสกุล : <input type="text" id="first-last" name="name" ></p>
+                            <p id="phone">เบอร์โทร : <input type="text" id="p-num" name="pnum" maxlength="10"></p>
+                            <p id="room">เลขห้อง : <input type="text" id="num-room" name="room" maxlength="3"  minlength="3" ></p>
                         </div>
                         <div class="form-group">
                             <label>รายละเอียด</label>
                             <textarea cols="80" rows="20" name = "problem" class="form-control"></textarea><br>
                             <button type="submit">SUBMIT</button>
-                            <a href="/roomSTD" role="button" id="btB">BACK</a>
+                            <a href="/roomStudent" role="button" id="back" >BACK</a>
                         </div>
                     </form>
             </div>
