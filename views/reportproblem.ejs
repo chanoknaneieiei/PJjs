@@ -16,14 +16,12 @@
         <title>Register</title>
     </head>
     <body background="/images/bas.jpg">
-        <%- include alert %>
         <%- include navbar %>
-        <h2 align="center">แจ้งปัญหาภายในหอพัก</h2>
         <main>
             <% if(locals.errors){ %>
                 <ul class="alert alert-danger">
                     <% Object.values(errors).forEach(function(error){ %>
-                        <li><%= error.msg %></li>
+                        -<%= error.msg %>   
                     <% }) %>
                 </ul>
             <% } %>
