@@ -1,11 +1,8 @@
 var express = require('express');
 var router = express.Router();
-
 const { check, validationResult } = require('express-validator');
-
 const monk = require('monk')("localhost:27017/ProjectJS");
 
-/* GET users listing. */
 router.get('/', function(req, res, next) {
     res.render("reportproblem");
 });

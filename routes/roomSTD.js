@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('roomSTD');
 });
@@ -25,6 +24,5 @@ router.get('/floor4', function(req, res, next) {
 router.get('/floor5', function(req, res, next) {
   res.render('f5Std');
 });
-
 
 module.exports = router;
