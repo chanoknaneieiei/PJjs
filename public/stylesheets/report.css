@@ -53,11 +53,20 @@ button{
     background-color: orangered;
     border-radius: 5px;
     border: none;
-    top: 92%;
-    left: 110%;
+    top: 120%;
+    left: 84%;
 }
 
 #btB{
     position: relative;
-    top: -70px;
+    top: 120%;
+    left: 0%;
+    background-color: orangered;
+    color: black;
+    position:absolute;
+    width: 135px;
+    height: 45px;
+    text-align: center;
+    font-size: 28px;
+    font-family: "JasmineUPC";
 }

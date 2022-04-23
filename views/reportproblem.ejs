@@ -30,16 +30,16 @@
             <div class = "bg">
                     <form action="/reportproblem/success" method="post">
                         <div class="show-info">
-                            <p id="stdid">รหัสนักศึกษา : </p>
-                            <p id="name">ชื่อ-นามสกุล : </p>
-                            <p id="phone">เบอร์โทร : </p>
-                            <p id="room">เลขห้อง : </p>
+                            <p id="stdid">รหัสนักศึกษา : <input type="text" id="stdid" name="stdid" ></p>
+                            <p id="name">ชื่อ-นามสกุล : <input type="text" id="name" name="name" ></p>
+                            <p id="phone">เบอร์โทร : <input type="text" id="pnum" name="pnum" ></p>
+                            <p id="room">เลขห้อง : <input type="text" id="room" name="room" ></p>
                         </div>
                         <div class="form-group">
                             <label>รายละเอียด</label>
                             <textarea cols="80" rows="20" name = "problem" class="form-control"></textarea><br>
                             <button type="submit">SUBMIT</button>
-                            <button id="btB" type="submit">BACK</button>
+                            <a href="/roomSTD" role="button" id="btB">BACK</a>
                         </div>
                     </form>
             </div>
