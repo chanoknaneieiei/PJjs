@@ -1,88 +1,32 @@
 body{
-    background-color: black;
     align-self: center;
-    background:linear-gradient(to right , #4c4c4c , #000000);
 }
 
-  #box{
-    width: 100%;
-    color: white;
-    text-align: center;
-    background-color: #778899 ;
-    padding: 10px ;
-
-  }
-  table {
-    font-family: arial, sans-serif;
-    background-color: #000000;
-    border: 5px solid #000000 ;
-    color: white;
-    width: 100%;
-  }
+table {
+  font-family: arial, sans-serif;
+  background-color: #000000;
+  border: 5px solid #000000 ;
+  color: white;
+  width: 100%;
+  height: 100vh;
+  padding-left:5cm ;
+}
   
-  button{
-    width: 19.7%;
-    color: white;
-    border: 1px solid #dddddd;
-    background-color: #778899 ;
-    text-align: center;
-    padding: 10px;
-    border: 15px solid black;
+button{
+  width: 10%;
+  height: 10vh;
+  color: white;
+  font-family: "oppins", sans-serif;
+  background-color: blue ;
   }
+
+#bt1{
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  margin: 10px 50px;
+  padding-left: 1cm;
+}
   
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
-  i{
-    color: white;
-    position: absolute;
-    right: 30px;
-  }
-  header{
-    width: 100%;
-    height: 19vh;
-    background: linear-gradient(to left , #f3593e , #ed2c0a);
-}
-
-.logo{
-    width: 120px;
-    height: 120px;
-    position: absolute;
-    left: 400px;
-    top: 15px;
-}
-
-.header h1{
-    color: white;
-    font-size: 14px;
-    font-family: "oppins", sans-serif;
-    position: absolute;
-    left: 35%;
-    top: 4.5%;
-
-}
-
-.header h2{
-    color: white;
-    font-size: 24px;
-    font-family: "oppins", sans-serif;
-    position: absolute;
-    left: 35%;
-    top: 5.5%;
-}
-
-.header h3{
-    color: white;
-    font-size: 16px;
-    font-family: "oppins", sans-serif;
-    position: absolute;
-    left: 35%;
-    top: 9.4%;
-}
-.logout{
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    right: 105%;
-    top: -10%;
-}
