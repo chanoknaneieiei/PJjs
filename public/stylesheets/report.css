@@ -54,5 +54,10 @@ button{
     border-radius: 5px;
     border: none;
     top: 92%;
-    left: 85%;
+    left: 110%;
+}
+
+#btB{
+    position: relative;
+    top: -70px;
 }
