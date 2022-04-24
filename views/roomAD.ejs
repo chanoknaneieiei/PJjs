@@ -6,6 +6,11 @@
 </head>
     <body>
       <!--<%- include navbarAdmin %>-->
-      <%= data[0].problem %>
+      <% if(data.length == 0){ %>
+        <h1>ไม่พบข้อมูล</h1>
+      <% } %>
+      <% for(var i=0; i<data.length; i++){ %>
+        <%= data[i].problem %>
+      <% } %>
     </body>
 </html>

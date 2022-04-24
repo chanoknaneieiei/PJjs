@@ -34,18 +34,19 @@ router.post('/success', [
             problem:req.body.problem
 
         } , function(err , data){
+            console.log(data)
             if(err){
                 res.send(err);
             }
             else{
                 console.log("save");
-                //res.location('/');
-                //res.redirect('/');
+                res.location('/roomStudent');
+                res.redirect('/roomStudent');
 
             }
-            console.log("not save");
-            res.location('/');
-            res.redirect('/');
+            //console.log("not save");
+            //res.location('/');
+            //res.redirect('/');
         });
     }
 });
