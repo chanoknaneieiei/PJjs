@@ -3,7 +3,7 @@ var router = express.Router();
 const { check, validationResult } = require('express-validator');
 const db = require('monk')("localhost:27017/Dormitory");
 
-/* GET login page. */
+/* login page. */
 router.get('/', function(req, res, next) {
   res.render('index');
 });

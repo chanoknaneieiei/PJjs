@@ -17,31 +17,28 @@
     </head>
     <body background="/images/bas.jpg">
         <%- include navbar %>
-        <main>
-            <% if(locals.errors){ %>
-                <ul class="alert alert-danger">
-                    <% Object.values(errors).forEach(function(error){ %>
-                        -<%= error.msg %>   
-                    <% }) %>
-                </ul>
-            <% } %>
-            <div class = "bg">
-                    <form action="/report/success" method="post">
-                        <div class="show-info">
-                            <p id="stdid">รหัสนักศึกษา : <input type="text" id="std-id" name="stdid" maxlength="13"></p>
-                            <p id="name">ชื่อ-นามสกุล : <input type="text" id="first-last" name="name" ></p>
-                            <p id="phone">เบอร์โทร : <input type="text" id="p-num" name="pnum" maxlength="10"></p>
-                            <p id="room">เลขห้อง : <input type="text" id="num-room" name="room" maxlength="3"  minlength="3" ></p>
-                        </div>
-                        <div class="form-group">
-                            <label>รายละเอียด</label>
-                            <textarea cols="80" rows="20" name = "problem" class="form-control"></textarea><br>
-                            <button type="submit">SUBMIT</button>
-                            <a href="/roomStudent" role="button" id="back" >BACK</a>
-                        </div>
-                    </form>
-            </div>
-            
-        </main>
+        <% if(locals.errors){ %>
+            <ul class="alert alert-danger">
+                <% Object.values(errors).forEach(function(error){ %>
+                    -<%= error.msg %>   
+                <% }) %>
+            </ul>
+        <% } %>
+        <div class = "bg">
+            <form action="/report/success" method="post">
+                <div class="show-info">
+                    <p id="stdid">รหัสนักศึกษา : <input type="text" id="std-id" name="stdid" maxlength="13"></p>
+                    <p id="name">ชื่อ-นามสกุล : <input type="text" id="first-last" name="name" ></p>
+                    <p id="phone">เบอร์โทร : <input type="text" id="p-num" name="pnum" maxlength="10"></p>
+                    <p id="room">เลขห้อง : <input type="text" id="num-room" name="room" maxlength="3"  minlength="3" ></p>
+                </div>
+                <div class="form-group">
+                    <label>รายละเอียด</label>
+                    <textarea cols="80" rows="20" name = "problem" class="form-control"></textarea><br>
+                    <button type="submit">SUBMIT</button>
+                    <a href="/roomStudent" role="button" id="back" >BACK</a>
+                </div>
+            </form>
+        </div>
     </body>
 </html>
