@@ -4,9 +4,9 @@ var router = express.Router();
 const db = require('monk')("localhost:27017/Dormitory");
 
 /* Admin page. */
-router.get('/', function(req, res, next) {
+/*router.get('/', function(req, res, next) {
   res.render('roomAD');
-});
+});*/
 
 router.get('/', function(req, res, next) {
   var ct = db.get('problem');
