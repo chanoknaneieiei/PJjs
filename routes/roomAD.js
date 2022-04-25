@@ -48,4 +48,8 @@ router.post('/addPost', [
     }
 });
 
+router.get('/manage', function(req, res, next) {
+  res.render('announce');
+});
+
 module.exports = router;
