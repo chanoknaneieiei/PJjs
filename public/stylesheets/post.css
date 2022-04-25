@@ -41,15 +41,15 @@ label{
 }
 
 #bt-post{
-    position: relative;
+    position: absolute;
     width: 80px;
     height: 40px;
     background-color: orangered;
     border: none;
     border-radius: 8px;
     font-size: 20px;
-    top: 70px;
-    left: 160px;
+    top: 78%;
+    left: 75%;
 }
 
 .box-line{
@@ -57,5 +57,5 @@ label{
     height: 0.5vh;
     background-color: rgb(228, 228, 228);
     position:absolute;
-    top: 90%;
+    top: 95%;
 }

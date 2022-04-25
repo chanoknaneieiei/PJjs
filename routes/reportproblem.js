@@ -1,4 +1,4 @@
-var express = require('express');
+/*var express = require('express');
 var router = express.Router();
 const { check, validationResult } = require('express-validator');
 const monk = require('monk')("localhost:27017/Dormitory");
@@ -48,4 +48,4 @@ router.post('/success', [
     }
 });
 
-module.exports = router;
+module.exports = router;*/

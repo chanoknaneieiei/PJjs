@@ -1,5 +1,5 @@
 var express = require('express');
-const { _router } = require('../app');
+const { check, validationResult } = require('express-validator');
 var router = express.Router();
 const db = require('monk')("localhost:27017/Dormitory");
 
@@ -14,6 +14,38 @@ router.get('/', function(req, res, next) {
 
 router.get('/addPost', function(req, res, next) {
   res.render('addPost');
+});
+
+router.post('/addPost', [
+  check("title" , "กรุณาป้อนชื่อเรื่อง").not().isEmpty(),
+  check("author" , "กรุณาป้อนชื่อผู้เขียน").not().isEmpty(),
+  check("content" , "กรุณาป้อนเนื้อหา").not().isEmpty()
+], function(req, res, next) {
+  const result = validationResult(req);
+    var errors = result.errors;
+    if (!result.isEmpty()) {
+        res.render('addPost' , {errors : errors});
+    }
+    else{
+        //insert data to DB
+        var collection = db.get('announce');
+        console.log("Insert");
+        collection.insert({
+            title:req.body.title,
+            author:req.body.author,
+            content:req.body.content
+        } , function(err , data){
+            console.log(data)
+            if(err){
+              res.send(err);
+            }
+            else{
+              console.log("save");
+              res.location('/');
+              res.redirect('/');
+            }
+        });
+    }
 });
 
 module.exports = router;
