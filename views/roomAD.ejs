@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
 </head>
     <body>
-      <!--<%- include navbarAdmin %>-->
+      <%- include navbarAdmin %>
       <% if(data.length == 0){ %>
         <h1>ไม่พบข้อมูล</h1>
       <% } %>
       <% for(var i=0; i<data.length; i++){ %>
         <%= data[i].problem %>
+        <%= data[i].room %>
       <% } %>
     </body>
 </html>

@@ -4,19 +4,10 @@
         <title>Report</title>
         <meta charset="UTF-8">
         <script type="text/javascript" src="register.js"></script>
-        <link rel="stylesheet" type="text/css" href='/stylesheets/report.css'>
-        <STYLE TYPE="TEXT/CSS">
-            A:link {
-            text-decoration:none;
-            }
-            A:visited {
-            text-decoration:none;
-            }
-            </STYLE>
-        <title>Register</title>
+        <link rel="stylesheet" type="text/css" href='/stylesheets/navbar.css'>
     </head>
-    <body background="/images/bas.jpg">
-        <%- include navbar %>
+    <!--<body background="/images/bas.jpg">-->
+        <%- include navbarSTD  %>
         <% if(locals.errors){ %>
             <ul class="alert alert-danger">
                 <% Object.values(errors).forEach(function(error){ %>
@@ -24,6 +15,7 @@
                 <% }) %>
             </ul>
         <% } %>
+        <!--
         <div class = "bg">
             <form action="/report/success" method="post">
                 <div class="show-info">
@@ -39,6 +31,6 @@
                     <a href="/roomStudent" role="button" id="back" >BACK</a>
                 </div>
             </form>
-        </div>
+        </div>-->
     </body>
 </html>
