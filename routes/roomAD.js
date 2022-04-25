@@ -41,8 +41,8 @@ router.post('/addPost', [
             }
             else{
               console.log("save");
-              res.location('/');
-              res.redirect('/');
+              res.location('/roomAdmin');
+              res.redirect('/roomAdmin');
             }
         });
     }

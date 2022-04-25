@@ -5,9 +5,8 @@
         <meta charset="UTF-8">
         <script type="text/javascript" src="register.js"></script>
         <link rel="stylesheet" type="text/css" href='/stylesheets/navbar.css'>
-        <link rel="stylesheet" type="text/css" href='/stylesheets/report.css'>
+        <link rel="stylesheet" type="text/css" href='/stylesheets/reproblem.css'>
     </head>
-    <!--<body background="/images/bas.jpg">-->
         <%- include navbarSTD  %>
         <% if(locals.errors){ %>
             <ul class="alert alert-danger">
@@ -16,26 +15,22 @@
                 <% }) %>
             </ul>
         <% } %>
-        
-        <div class = "bg">
-            <form action="/roomStudent/report" method="post">
-                <div class="show-info">
-                    <p id="stdid">รหัสนักศึกษา : <input type="text" id="std-id" name="stdid" maxlength="13"></p>
-                    <p id="name">ชื่อ-นามสกุล : <input type="text" id="first-last" name="name" ></p>
-                    <p id="phone">เบอร์โทร : <input type="text" id="p-num" name="pnum" maxlength="10"></p>
-                    <p id="room">เลขห้อง : <input type="text" id="num-room" name="room" maxlength="3"  minlength="3" ></p>
-                </div>
-                <div class="form-group">
-                    <label>รายละเอียด</label>
-                    <textarea cols="80" rows="20" name = "problem" class="form-control"></textarea><br>
-                    <button type="submit">SUBMIT</button>
-                    <a href="/roomStudent" role="button" id="back" >BACK</a>
-                </div>
+        <div class="box-title">
+            <p>แจ้งปัญหา</p>
+        </div>
+        <div class="box-detail">
+            <form method="post" action="/roomStudent/report">
+                <label>
+                    <p id="id-s">รหัสนักศึกษา <input type="text" placeholder=" กรุณาพิมพ์รหัสนักศึกษา" id="stdid" name="stdid" maxlength="13"></p>
+                    <p id="fl">ชื่อ-นามสกุล <input type="text" placeholder=" กรุณาพิมพ์ชื่อ" id="name" name="name"></p>
+                    <p id="nr">หมายเลขห้องพัก <input type="text" placeholder=" กรุณาพิมพ์หมายเลขห้อง" id="num-room" name="room" maxlength="3" minlength="3"></p>
+                    <p id="np">เบอร์ติดต่อ <input type="tel" placeholder=" กรุณาพิมพ์เบอร์โทรศัพท์" id="pnum" name="pnum" maxlength="10"></p>
+                    <textarea cols="75" rows="5" placeholder=" รายละเอียด" name="problem" id="problem"></textarea>
+                </label>
+                <button type="submit" id="bt">ส่ง</button>
+                <button type="reset" id="bt">รีเซ็ต</button>
             </form>
         </div>
-        <div class="box-title">
-
-        </div>
-
+        <div class="box-line"></div>
     </body>
 </html>

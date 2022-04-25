@@ -3,9 +3,16 @@
   <head>
     <title>Student</title>
     <meta charset="UTF-8">
-    <title>RoomForStudent</title>
   </head>
     <body>
-      <%- include navbarSTD %>  
+      <%- include navbarSTD %>
+      <% if(data.length == 0){ %>
+        <h1>ไม่มีข่าวสาร</h1>
+      <% } %>
+      <% for(var i=0; i<data.length; i++){ %>
+        <%= data[i].title %>
+        <%= data[i].author %>
+        <%= data[i].content %>
+      <% } %>
     </body>
 </html>

@@ -9,7 +9,6 @@ var usersRouter = require('./routes/users');
 var registerRouter = require('./routes/register');
 var roomAdminRounter = require('./routes/roomAD');
 var roomStudentRounter = require('./routes/roomSTD');
-//var reportproblemRounter = require('./routes/reportproblem');
 
 var app = express();
 
@@ -28,7 +27,6 @@ app.use('/users', usersRouter);
 app.use('/register', registerRouter);
 app.use('/roomAdmin',roomAdminRounter);
 app.use('/roomStudent',roomStudentRounter);
-//app.use('/report',reportproblemRounter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
