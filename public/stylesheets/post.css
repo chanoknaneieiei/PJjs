@@ -1,0 +1,42 @@
+.box-title{
+    background-color: rgb(228, 228, 228);
+    width: 100%;
+    height: 6vh;
+    margin-top: 50px;
+    position: relative;
+    font-size: 28px;
+    font-family: "JasmineUPC";
+    font-weight: bold;
+    text-align: center;
+}
+
+.box-detail{
+    background-color: antiquewhite;
+    width: 80%;
+    height: 70vh;
+    position: fixed;
+    left: 10%;
+    font-family: "JasmineUPC";
+}
+
+label{
+    position: relative;
+    left: 20%;
+    top: 30px;
+    font-size: 24px;
+}
+
+#tit{
+    width: 700px;
+    left: 4%;
+    position: relative;
+}
+
+#author{
+    width: 700px;
+}
+
+#content{
+    left: 7%;
+    position: relative;
+}

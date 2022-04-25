@@ -44,9 +44,6 @@ router.post('/success', [
                 res.redirect('/roomStudent');
 
             }
-            //console.log("not save");
-            //res.location('/');
-            //res.redirect('/');
         });
     }
 });
