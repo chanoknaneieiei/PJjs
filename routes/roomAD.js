@@ -49,7 +49,12 @@ router.post('/addPost', [
 });
 
 router.get('/manage', function(req, res, next) {
-  res.render('announce');
+  var ct = db.get('announce');
+  ct.find({}, {projection: {_id: 0, title: 1, author: 1, content: 1}})
+  .then(result => {
+    console.log(result)
+    res.render('announce',{data: result});
+  });
 });
 
 module.exports = router;
