@@ -6,7 +6,7 @@ const db = require('monk')("localhost:27017/Dormitory");
 
 router.get('/', function(req, res, next) {
   var ct = db.get('problem');
-  ct.find({}, {projection: {_id: 0, stid:1, name: 1, pnum: 1, room: 1, problem: 1}})
+  ct.find({}, {projection: {_id: 1, stid:1, name: 1, pnum: 1, room: 1, problem: 1}})
   .then(result => {
     console.log(result)
     res.render('roomAD',{data: result});
@@ -65,5 +65,22 @@ router.post('/manage(:title)', function(req, res, next) {
     res.redirect('/roomAdmin/manage');
   });
 });
+
+router.get('/dataManage', function(req, res, next) {
+  var ct = db.get('problem');
+  ct.find({}, {projection: {_id: 1, stid:1, name: 1, pnum: 1, room: 1, problem: 1}})
+  .then(result => {
+    //console.log(result)
+    res.render('problemManage',{data: result});
+  });
+});
+
+router.post('/dataManage(:_id)', function(req, res, next) {
+  var ct = db.get('problem');
+  ct.findOneAndDelete({_id: req.params._id}).then((doc) => {
+    res.location('/roomAdmin');
+    res.redirect('/roomAdmin');
+  })
+})
 
 module.exports = router;

@@ -27,7 +27,7 @@
                 <% if(data.length == 0){ %>
                   <td>ไม่พบข้อมูลให้จัดการ</td>
                 <% } %>
-                <% for(var i=0; i<data.length; i++){ %>
+                <% for(var i=0; i<data.length; i++) { %>
                   <tr>
                     <td><%= data[i].title %></td>
                     <td><%= data[i].author %></td>
@@ -42,7 +42,6 @@
           </div>
         </table>
         </div>
-      </main>
       </main>
     </body>
 </html>

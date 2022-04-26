@@ -22,6 +22,7 @@
                 <th scope="col">หมายเลขห้องพัก</th>
                 <th scope="col">เบอร์โทร</th>
                 <th scope="col">รายละเอียด</th>
+                <th scope="col">การกระทำ</th> 
               </tr>
             </thead>
             <div class="card-body">
@@ -35,6 +36,11 @@
                   <td><%= data[i].room %></td>
                   <td><%= data[i].pnum %></td>
                   <td><%= data[i].problem %></td>
+                  <td>
+                    <form method="post" action="/roomAdmin/dataManage<%= data[i]._id %>">
+                      <button class="btn btn-success delete">ดำเนินการแล้ว</button>
+                    </form>
+                  </td>
                 </tr>
               <% } %>
             </div>
