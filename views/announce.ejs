@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
   </head>
     <body>
-        <%- include navbarAdmin %>
-
+      <%- include navbarAdmin %>
+      <main class="container" style="margin-top:50px">
+        <!--
         <% if(data.length == 0){ %>
             <h1>ไม่พบข้อมูลให้จัดการ</h1>
         <% } %>
@@ -15,7 +16,55 @@
             <%= data[i].author %>
             <%= data[i].content %>
             <button type="button">ลบ</button><br>
-        <% } %>
+        <% } %>-->
 
+        <div class="card">
+          <div class="card-header">
+            <ul class="nav nav-pills w-100">
+              <li class="nav-link">ข่าวสาร</li>
+               <li class="nav nav-pills w-100">
+            </ul>
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ชื่อเรื่อง</th>
+                <th scope="col">ผู้เขียน</th>
+                <th scope="col">รายละเอียด</th>
+                <th scope="col">การกระทำ</th>
+              </tr>
+            </thead>
+              <div class="card-body">
+                <% if(data.length == 0){ %>
+                  <h1>ไม่พบข้อมูลให้จัดการ</h1>
+                <% } %>
+                <% for(var i=0; i<data.length; i++){ %>
+                  <tr>
+                    <td><%= data[i].title %></td>
+                    <td><%= data[i].author %></td>
+                    <td><%= data[i].content %></td>
+                    <!--<td><a href="/roomAdmin/manage<%= data[i].title %>"  class="btn btn-danger delete">ลบ</a></td>-->
+                    <td>
+                      <form method="post" action="/roomAdmin/manage">
+                        <a href="/roomAdmin/manage" type="submit"  class="btn btn-danger delete">ลบ</a>
+                      </form>
+                    </td>
+                </tr>
+                <% } %>
+          </div>
+        </table>
+        </div>
+      </main>
     </body>
 </html>
+<!--
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ชื่อเรื่อง</th>
+      <th scope="col">ผู้เขียน</th>
+      <th scope="col">รายละเอียด</th>
+      <th scope="col">การกระทำ</th>
+    </tr>
+  </thead>
+</table>-->

@@ -53,9 +53,26 @@ router.get('/manage', function(req, res, next) {
   var ct = db.get('announce');
   ct.find({}, {projection: {_id: 0, title: 1, author: 1, content: 1}})
   .then(result => {
-    console.log(result)
+    //console.log(result)
     res.render('announce',{data: result});
   });
+});
+
+router.post('/manage', function(req, res, next) {
+  console.log("asdsdasdasdd")
+  var ct = db.get('announce');
+  ct.findOneAndDelete({title: req.body.title}).then((doc) => {
+    console.log(doc)
+    console.log("Delete")
+    if(err){
+      res.send(err);
+    }
+    else{
+      console.log("save");
+      res.location('/roomAdmin');
+      res.redirect('/roomAdmin');
+    }
+  })
 });
 
 module.exports = router;
