@@ -1,8 +1,9 @@
 var express = require('express');
 const { check, validationResult } = require('express-validator');
+require('dotenv').config();
 const { ObjectID } = require('mongodb');
 var router = express.Router();
-const db = require('monk')("localhost:27017/Dormitory");
+const db = require('monk')(process.env.mongo_url || "localhost:27017/admin");
 
 router.get('/', function(req, res, next) {
   var ct = db.get('problem');
