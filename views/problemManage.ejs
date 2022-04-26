@@ -10,7 +10,7 @@
         <div class="card">
           <div class="card-header">
             <ul class="nav nav-pills w-100">
-              <li class="nav-link">ปัญหาหอพัก</li>
+              <li class="nav-link">จัดการข้อมูล</li>
                <li class="nav nav-pills w-100">
             </ul>
           </div>
@@ -38,7 +38,7 @@
                   <td><%= data[i].problem %></td>
                   <td>
                     <form method="post" action="/roomAdmin/dataManage<%= data[i]._id %>">
-                      <button class="btn btn-success delete">ดำเนินการแล้ว</button>
+                      <button class="btn btn-success delete" onclick="alert('Are you sure?')">ดำเนินการแล้ว</button>
                     </form>
                   </td>
                 </tr>
