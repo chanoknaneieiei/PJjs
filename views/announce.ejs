@@ -34,7 +34,7 @@
                     <td><%= data[i].content %></td>
                     <td>
                       <form method="post" action="/roomAdmin/manage<%= data[i].title %>">
-                        <button class="btn btn-danger delete">ลบ</button>
+                        <button class="btn btn-danger delete" onclick="alert('Are you sure?')">ลบ</button>
                       </form>
                     </td>
                 </tr>
@@ -42,6 +42,7 @@
           </div>
         </table>
         </div>
+      </main>
       </main>
     </body>
 </html>

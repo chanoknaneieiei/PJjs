@@ -21,21 +21,32 @@
                 <th scope="col">ชื่อ</th>
                 <th scope="col">หมายเลขห้องพัก</th>
                 <th scope="col">เบอร์โทร</th>
-                <th scope="col">รายละเอียด</th> 
+                <th scope="col">รายละเอียด</th>
+                <th scope="col">การกระทำ</th> 
               </tr>
             </thead>
-              <div class="card-body">
-      <% if(data.length == 0){ %>
-        <td>ไม่มีข้อมูลที่ได้รับแจ้ง</td>
-      <% } %>
-      <% for(var i=0; i<data.length; i++){ %>
-        <tr>
-        <td><%= data[i].stid %></td>
-        <td><%= data[i].name %></td>
-        <td><%= data[i].room %></td>
-        <td><%= data[i].pnum %></td>
-        <td><%= data[i].problem %></td>
-        </tr>
-      <% } %>
+            <div class="card-body">
+            <% if(data.length == 0){ %>
+              <td>ไม่มีข้อมูลที่ได้รับแจ้ง</td>
+            <% } %>
+            <% for(var i=0; i<data.length; i++){ %>
+              <tr>
+              <td><%= data[i].stid %></td>
+              <td><%= data[i].name %></td>
+              <td><%= data[i].room %></td>
+              <td><%= data[i].pnum %></td>
+              <td><%= data[i].problem %></td>
+              <td>
+                <form method="post" action="/roomAdmin<%= data[i].room %>">
+                  <button class="btn btn-success edit">ดำเนินการแล้ว</button>
+                </form>
+              </td>
+              </tr>
+            <% } %>
+          </div>
+        </table>
+        </div>
+      </main>
+      </main>
     </body>
 </html>

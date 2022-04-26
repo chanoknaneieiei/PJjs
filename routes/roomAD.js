@@ -30,7 +30,7 @@ router.post('/addPost', [
     else{
         //insert data to DB
         var collection = db.get('announce');
-        console.log("Insert");
+        //console.log("Insert");
         collection.insert({
             title:req.body.title,
             author:req.body.author,
