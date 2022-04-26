@@ -7,17 +7,6 @@
     <body>
       <%- include navbarAdmin %>
       <main class="container" style="margin-top:50px">
-        <!--
-        <% if(data.length == 0){ %>
-            <h1>ไม่พบข้อมูลให้จัดการ</h1>
-        <% } %>
-        <% for(var i=0; i<data.length; i++){ %>
-            <%= data[i].title %>
-            <%= data[i].author %>
-            <%= data[i].content %>
-            <button type="button">ลบ</button><br>
-        <% } %>-->
-
         <div class="card">
           <div class="card-header">
             <ul class="nav nav-pills w-100">
@@ -36,17 +25,16 @@
             </thead>
               <div class="card-body">
                 <% if(data.length == 0){ %>
-                  <h1>ไม่พบข้อมูลให้จัดการ</h1>
+                  <td>ไม่พบข้อมูลให้จัดการ</td>
                 <% } %>
                 <% for(var i=0; i<data.length; i++){ %>
                   <tr>
                     <td><%= data[i].title %></td>
                     <td><%= data[i].author %></td>
                     <td><%= data[i].content %></td>
-                    <!--<td><a href="/roomAdmin/manage<%= data[i].title %>"  class="btn btn-danger delete">ลบ</a></td>-->
                     <td>
-                      <form method="post" action="/roomAdmin/manage">
-                        <a href="/roomAdmin/manage" type="submit"  class="btn btn-danger delete">ลบ</a>
+                      <form method="post" action="/roomAdmin/manage<%= data[i].title %>">
+                        <button class="btn btn-danger delete">ลบ</button>
                       </form>
                     </td>
                 </tr>

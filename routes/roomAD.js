@@ -58,21 +58,12 @@ router.get('/manage', function(req, res, next) {
   });
 });
 
-router.post('/manage', function(req, res, next) {
-  console.log("asdsdasdasdd")
+router.post('/manage(:title)', function(req, res, next) {
   var ct = db.get('announce');
-  ct.findOneAndDelete({title: req.body.title}).then((doc) => {
-    console.log(doc)
-    console.log("Delete")
-    if(err){
-      res.send(err);
-    }
-    else{
-      console.log("save");
-      res.location('/roomAdmin');
-      res.redirect('/roomAdmin');
-    }
-  })
+  ct.findOneAndDelete({title: req.params.title}).then((doc) => {
+    res.location('/roomAdmin/manage');
+    res.redirect('/roomAdmin/manage');
+  });
 });
 
 module.exports = router;
